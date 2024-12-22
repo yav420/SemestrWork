@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.client.ChatClientController" spacing="10" alignment="CENTER" prefWidth="400" prefHeight="400">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Поля для логина и пароля -->
+    <TextField fx:id="usernameField" promptText="Имя пользователя" />
+    <PasswordField fx:id="passwordField" promptText="Пароль" />
+
+    <!-- Кнопки регистрации и входа -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="registerButton" text="Регистрация" onAction="#registerUser" />
+        <Button fx:id="loginButton" text="Вход" onAction="#loginUser" />
+    </HBox>
+
+    <!-- Поле для отображения чата -->
+    <TextArea fx:id="chatArea" editable="false" prefHeight="200" />
+
+    <!-- Поле для ввода сообщения -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="messageField" promptText="Введите сообщение" />
+        <Button fx:id="sendButton" text="Отправить" onAction="#sendMessage" />
+    </HBox>
+</VBox>
